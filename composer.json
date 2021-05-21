@@ -1,0 +1,21 @@
+{
+  "require": {
+    "spatie/ignition": "dev-main",
+    "symfony/var-dumper": "^5.2"
+  },
+  "repositories": [
+    {
+      "type":  "path",
+      "url": "../ignition"
+    }
+  ],
+
+  "name": "project/project",
+  "description": "Project",
+
+  "autoload": {
+    "psr-4": {
+      "Flare\\": "flare/"
+    }
+  }
+}
