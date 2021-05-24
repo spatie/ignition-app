@@ -7,6 +7,10 @@
     {
       "type":  "path",
       "url": "../ignition"
+    },
+    {
+      "type":  "path",
+      "url": "../flare-client-php"
     }
   ],
   "minimum-stability": "dev",

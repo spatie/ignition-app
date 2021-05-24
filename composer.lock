@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6fe00e8c100222ac711b6056d4bbb21d",
+    "content-hash": "04864a26bbb51de03e5785069252d027",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -768,16 +768,10 @@
         {
             "name": "spatie/flare-client-php",
             "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/flare-client-php.git",
-                "reference": "75f79bf25dfed8af0ca3d28f85b354cae31b8fb0"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/flare-client-php/zipball/75f79bf25dfed8af0ca3d28f85b354cae31b8fb0",
-                "reference": "75f79bf25dfed8af0ca3d28f85b354cae31b8fb0",
-                "shasum": ""
+                "type": "path",
+                "url": "../flare-client-php",
+                "reference": "e5086f2c7ea9bcc37f2af964e0e8941e6a4573b7"
             },
             "require": {
                 "illuminate/pipeline": "^8.0",
@@ -786,6 +780,7 @@
                 "spatie/ignition-contracts": "^1.0.3",
                 "symfony/http-foundation": "^5.0",
                 "symfony/mime": "^5.2",
+                "symfony/process": "^5.2",
                 "symfony/var-dumper": "^5.2"
             },
             "require-dev": {
@@ -793,7 +788,6 @@
                 "phpunit/phpunit": "^9.5",
                 "spatie/phpunit-snapshot-assertions": "^4.0"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -808,7 +802,22 @@
                     "src/helpers.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "Spatie\\FlareClient\\Tests\\": "tests"
+                }
+            },
+            "scripts": {
+                "format": [
+                    "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+                ],
+                "test": [
+                    "vendor/bin/phpunit"
+                ],
+                "test-coverage": [
+                    "vendor/bin/phpunit --coverage-html coverage"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -820,17 +829,9 @@
                 "reporting",
                 "spatie"
             ],
-            "support": {
-                "issues": "https://github.com/spatie/flare-client-php/issues",
-                "source": "https://github.com/spatie/flare-client-php/tree/main"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/spatie",
-                    "type": "github"
-                }
-            ],
-            "time": "2021-05-24T09:17:55+00:00"
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "spatie/ignition",
@@ -838,7 +839,7 @@
             "dist": {
                 "type": "path",
                 "url": "../ignition",
-                "reference": "e538e0452ca2d61d7e88192671d45bed445b171f"
+                "reference": "52e4d8a199359cab75baf4ed93bb91755f79241a"
             },
             "require": {
                 "ext-json": "*",
@@ -1923,6 +1924,68 @@
                 }
             ],
             "time": "2021-01-07T16:49:33+00:00"
+        },
+        {
+            "name": "symfony/process",
+            "version": "v5.2.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/process.git",
+                "reference": "98cb8eeb72e55d4196dd1e36f1f16e7b3a9a088e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/process/zipball/98cb8eeb72e55d4196dd1e36f1f16e7b3a9a088e",
+                "reference": "98cb8eeb72e55d4196dd1e36f1f16e7b3a9a088e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "symfony/polyfill-php80": "^1.15"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Process\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Executes commands in sub-processes",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/process/tree/v5.3.0-BETA1"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2021-04-08T10:27:02+00:00"
         },
         {
             "name": "symfony/service-contracts",

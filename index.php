@@ -2,6 +2,7 @@
 
 use App\Test;
 use Spatie\FlareClient\Flare;
+use Spatie\FlareClient\FlareMiddleware\AddGitInformation;
 use Spatie\Ignition\Ignition;
 
 include 'vendor/autoload.php';
@@ -9,9 +10,12 @@ include 'vendor/autoload.php';
 Ignition::make()
     ->applicationPath(__DIR__)
     ->configureFlare(function(Flare $flare) {
-        $flare->anonymizeIp();
+        $flare
+            ->anonymizeIp();
     })
+    ->registerMiddleware(AddGitInformation::class)
     ->register();
+
 
 (new Test)->myPropertyy;
 
