@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8495ae1558c5cb845e9972272e8d6ace",
+    "content-hash": "6fe00e8c100222ac711b6056d4bbb21d",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -704,33 +704,96 @@
             "time": "2017-10-23T01:57:42+00:00"
         },
         {
-            "name": "spatie/flare-client-php",
-            "version": "1.8.0",
+            "name": "spatie/backtrace",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/spatie/flare-client-php.git",
-                "reference": "cee892f8bef4f62e775ce0d59c411cba91d1a170"
+                "url": "https://github.com/spatie/backtrace.git",
+                "reference": "9b4df807fb65aaa8006dcd7a7ccdef8fb4bb002e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/flare-client-php/zipball/cee892f8bef4f62e775ce0d59c411cba91d1a170",
-                "reference": "cee892f8bef4f62e775ce0d59c411cba91d1a170",
+                "url": "https://api.github.com/repos/spatie/backtrace/zipball/9b4df807fb65aaa8006dcd7a7ccdef8fb4bb002e",
+                "reference": "9b4df807fb65aaa8006dcd7a7ccdef8fb4bb002e",
                 "shasum": ""
             },
             "require": {
-                "illuminate/pipeline": "^5.5|^6.0|^7.0|^8.0",
-                "php": "^7.1|^8.0",
-                "spatie/ignition-contracts": "~1.0",
-                "symfony/http-foundation": "^3.3|^4.1|^5.0",
-                "symfony/mime": "^3.4|^4.0|^5.1",
-                "symfony/var-dumper": "^3.4|^4.0|^5.0"
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "ext-json": "*",
+                "phpunit/phpunit": "^9.3",
+                "symfony/var-dumper": "^5.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\Backtrace\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van de Herten",
+                    "email": "freek@spatie.be",
+                    "homepage": "https://spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A better backtrace",
+            "homepage": "https://github.com/spatie/backtrace",
+            "keywords": [
+                "Backtrace",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/backtrace/issues",
+                "source": "https://github.com/spatie/backtrace/tree/1.2.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/spatie",
+                    "type": "github"
+                },
+                {
+                    "url": "https://spatie.be/open-source/support-us",
+                    "type": "other"
+                }
+            ],
+            "time": "2021-05-19T12:49:10+00:00"
+        },
+        {
+            "name": "spatie/flare-client-php",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/flare-client-php.git",
+                "reference": "75f79bf25dfed8af0ca3d28f85b354cae31b8fb0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/flare-client-php/zipball/75f79bf25dfed8af0ca3d28f85b354cae31b8fb0",
+                "reference": "75f79bf25dfed8af0ca3d28f85b354cae31b8fb0",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/pipeline": "^8.0",
+                "php": "^7.4|^8.0",
+                "spatie/backtrace": "^1.2",
+                "spatie/ignition-contracts": "^1.0.3",
+                "symfony/http-foundation": "^5.0",
+                "symfony/mime": "^5.2",
+                "symfony/var-dumper": "^5.2"
             },
             "require-dev": {
                 "dms/phpunit-arraysubset-asserts": "^0.3.0",
-                "friendsofphp/php-cs-fixer": "^2.14",
-                "phpunit/phpunit": "^7.5.16|^8.0|^9.0",
-                "spatie/phpunit-snapshot-assertions": "^2.0|^3.0|^4.0"
+                "phpunit/phpunit": "^9.5",
+                "spatie/phpunit-snapshot-assertions": "^4.0"
             },
+            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -759,7 +822,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/flare-client-php/issues",
-                "source": "https://github.com/spatie/flare-client-php/tree/1.8.0"
+                "source": "https://github.com/spatie/flare-client-php/tree/main"
             },
             "funding": [
                 {
@@ -767,7 +830,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-05-17T11:51:06+00:00"
+            "time": "2021-05-24T09:17:55+00:00"
         },
         {
             "name": "spatie/ignition",
@@ -775,14 +838,14 @@
             "dist": {
                 "type": "path",
                 "url": "../ignition",
-                "reference": "fbef56d381bead0b79be6805ead3a9b9b482fa54"
+                "reference": "e538e0452ca2d61d7e88192671d45bed445b171f"
             },
             "require": {
                 "ext-json": "*",
                 "ext-mbstring": "*",
                 "monolog/monolog": "^2.0",
                 "php": "^7.4|^8.0",
-                "spatie/flare-client-php": "^1.6",
+                "spatie/flare-client-php": "dev-main",
                 "spatie/ignition-contracts": "^1.0.3",
                 "symfony/console": "^5.0",
                 "symfony/var-dumper": "^5.0"
@@ -2359,11 +2422,11 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "spatie/ignition": 20
     },
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],

@@ -9,13 +9,14 @@
       "url": "../ignition"
     }
   ],
-
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "name": "project/project",
   "description": "Project",
 
   "autoload": {
     "psr-4": {
-      "Flare\\": "flare/"
+      "App\\": "app/"
     }
   }
 }
