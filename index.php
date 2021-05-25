@@ -9,10 +9,6 @@ include 'vendor/autoload.php';
 
 Ignition::make()
     ->applicationPath(__DIR__)
-    ->configureFlare(function(Flare $flare) {
-        $flare
-            ->anonymizeIp();
-    })
     ->registerMiddleware(AddGitInformation::class)
     ->register();
 
