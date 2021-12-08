@@ -6,11 +6,11 @@
   "repositories": [
     {
       "type":  "path",
-      "url": "../ignition"
+      "url": "../flare-client-php"
     },
     {
       "type":  "path",
-      "url": "../flare-client-php"
+      "url": "../ignition"
     }
   ],
   "minimum-stability": "dev",
